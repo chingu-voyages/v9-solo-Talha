@@ -186,7 +186,7 @@
 						
 							<img src="progressapp.jpg" alt="" class="img-fluid mt-5">
 
-						</div>	
+						</div>
 					</div>
 				</div>
 			</div>
