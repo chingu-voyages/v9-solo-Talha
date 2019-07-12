@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
@@ -11,11 +12,11 @@
 
 		<title>
       
-			Peer Pals - Home
+			The Gyro Guys
       
 		</title>
-
-        <!-- jQuery CDN - Slim version (=with AJAX) -->
+		
+		<!-- jQuery CDN - Slim version (=with AJAX) -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -25,92 +26,733 @@
 		<!-- Bootstrap JS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<!-- Font Awesome Icons -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- CSS Styles -->
-        <link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link href="assets/css/toolkit-minimal.css" rel="stylesheet">
+     	<link href="assets/css/application-minimal.css" rel="stylesheet">
+		<link rel="stylesheet" href="animate.min.css">
+		<link rel="stylesheet" href="dist/aos.css" />
 
-    </head>
+		<style>
+			html {	
+			scroll-behavior: smooth;
+		}
 
-	<body data-spy="scroll" data-target="#navbar">
+		body{
+			letter-spacing: -0.5px;
+		}
 
-        <nav id="navbar" class="navbar sticky-top navbar-expand-md navbar-dark">
-			<div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#about">About</a>
-					</li>
-				</ul>
+		::-webkit-scrollbar{
+			width: 0px;
+		}
+
+		.padding-0{
+			padding-right:0;
+			padding-left:0;
+		}
+
+		.wrapper {
+			display: flex;
+			width: 100%;
+		}
+
+		.transparent{
+			background-color:transparent;
+		}
+
+		.textRed{
+			color:#EE1C22;
+		}
+
+		.bgRed{
+			background-color:#EE1C22;
+		}
+
+		.bgBlue{
+			background-color:#00AEEF;
+		}
+
+		.bgBlack{
+			background-color:#151515;
+		}
+
+		.gyroText{
+			position:relative;
+			animation-name: Gyro;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			color:#00AEEF;
+		}
+
+		@keyframes Gyro {
+			0%   {
+				color:#00AEEF;
+			}
+			50%  {
+				color:#EE1C22;
+			}
+			100% {
+				color:#00AEEF;
+			}
+		}
+
+		.altGyroText{
+			position:relative;
+			animation-name: GyroAlt;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			color:#EE1C22;
+		}
+
+		@keyframes GyroAlt {
+			0%   {
+				color:#EE1C22;
+			}
+			50%  {
+				color:#00AEEF;
+			}
+			100% {
+				color:#EE1C22;
+			}
+		}
+
+		.textBlue{
+			color:#00AEEF;
+		}
+
+		#footerwork{
+			font-size:25px;
+		}
+
+		#jumbotron{
+			height:100vh;
+			background-image: url('4.jpg');
+			min-height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+			-webkit-background-attachment: fixed;
+			-moz-background-attachment: fixed;
+			-o-background-attachment: fixed;
+			margin-bottom:0px;
+		}
+
+		#jumbotron1{
+			height:40vh;
+			background-image: url('grillhand.jpg');
+			min-height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+		}
+
+		#jumbotron2{
+			height:40vh;
+			background-image: url('burger1.jpg');
+			min-height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+		}
+
+		#jumbotron3{
+			height:40vh;
+			background-image: url('patty.jpg');
+			min-height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+		}
+
+		.header {
+			position: relative;
+			border-bottom:2px solid white;
+		}
+
+		.about{
+			width:160px;
+		}
+
+		.center{
+			margin: auto;
+		}
+
+		#logoAnimate{
+			position:relative;
+			animation-name: rotation;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+		}
+
+		@keyframes rotation {
+			0% {transform: rotate(0deg);}
+			100% {transform: rotate(360deg);}
+		}
+
+		@media (max-width:800px){
+			#images{
+				display:none;
+			}
+		}
+
+		@media (min-width:800px){
+			#images{
+				display:inherit;
+			}
+		}
+
+		@media (max-width:800px){
+			body{
+				background-color:#151515;
+			}
+		}
+
+		@media (min-width:800px){
+			body{
+				background-image: url('background.jpg');
+				min-height: 100%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				background-attachment: fixed;
+			}
+		}
+
+		#loadingBody{
+			position:absolute;
+			height:100vh;
+			width:100vw;
+			animation-duration: 3s;
+			animation-iteration-count: 1;
+			animation-delay: 6s;
+		}
+
+		#mainBody{
+			display:none;
+		}
+
+		#logoLoading{
+			animation-name:flipManual;
+			animation-duration: 2s;
+			animation-iteration-count: 2;
+			animation-delay: 2s;
+			margin-top:50vh;
+		}
+
+		@keyframes flipManual {
+			0% {transform: rotateY(0deg);}
+			100% {transform: rotateY(360deg);}
+		}
+
+		#bgAnimate{
+			width:100%;
+			height:100%;
+			animation-duration: 2s;
+			animation-iteration-count: 1;
+			background-image: url('loadingbg.jpg');
+			min-height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+			-webkit-background-attachment: fixed;
+			-moz-background-attachment: fixed;
+			-o-background-attachment: fixed;
+		}
+
+		.sqBg2{
+			animation-name:sqBg2;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			animation-delay: 5s;
+		}
+
+		@keyframes sqBg2 {
+			0% {background-color:#00AEEF;}
+			50% {background-color:#EE1C22;}
+			100% {background-color:#00AEEF;}
+		}
+
+		#hoursBorder{
+			border-top-left-radius:10px;
+			border-top-right-radius:10px;
+			border-bottom-left-radius:10px;
+			border-bottom-right-radius:10px;
+			border-left:2px #EE1C22 solid;
+			border-right:2px #EE1C22 solid;
+			border-top:2px #00AEEF solid;
+			border-bottom:2px #00AEEF solid;
+		}
+
+		#customer{
+			border-top-left-radius:10px;
+			border-top-right-radius:10px;
+			border-bottom-left-radius:10px;
+			border-bottom-right-radius:10px;
+			border-left:2px #EE1C22 solid;
+			border-right:2px #EE1C22 solid;
+			border-top:2px #00AEEF solid;
+			border-bottom:2px #00AEEF solid;
+		}
+
+		.borderRB{
+			border-top-left-radius:10px;
+			border-top-right-radius:10px;
+			border-bottom-left-radius:10px;
+			border-bottom-right-radius:10px;
+			border-left:2px #EE1C22 solid;
+			border-right:2px #EE1C22 solid;
+			border-top:2px #00AEEF solid;
+			border-bottom:2px #00AEEF solid;
+		}
+
+		.shortDesc{
+			background-image: url('gyroworker2.jpg');
+			min-height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-position: -100% 50%;
+			background-attachment: fixed;
+			-webkit-background-attachment: fixed;
+			-moz-background-attachment: fixed;
+			-o-background-attachment: fixed;
+		}
+		</style>
+
+	</head>
+
+	<body data-spy="scroll" data-target="#navigation">
+			
+		<div id="loadingBody" class="text-center zoomOut">
+
+			<div id="bgAnimate" class="zoomIn">
+				<img id="logoLoading" src="logocircle1.png" width="70px" alt="">
 			</div>
-            <div class="mx-auto order-0">
-				<a class="navbar-brand" href="">
-					<img src="pp.png" width="35px;" alt=""> <span class="greenanimate">Peer</span> <span class="grayanimate">Pals</span>
-				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+
+		</div>
+
+		<div id="mainBody">
+
+			<div class="pl-4 pr-4">
+				<div id="home"></div>
+				<div id="jumbotron" class="jumbotron transparent text-center">
+					<img class="img-fluid mt-5" src="logo4.png" width="500px"alt="">
+				</div>
+			</div>
+			
+			
+			<nav id="navigation" class="navbar sticky-top navbar-padded navbar-toggleable-sm mt-5" style="background-color:rgba(0, 174, 239, 0.95);">
+				<button
+					class="navbar-toggler navbar-toggler-right hidden-md-up"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarResponsive"
+					aria-controls="navbarResponsive"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-			</div>
-            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#exe">Execution</a>
-					</li>
-				</ul>
-			</div>
-        </nav>
-        
-        <div id="about">
-			<div class="block block-inverse pb-5 block-secondary borderbotG bgBlack">
-				<div data-aos="fade-left" class="text-center">
-					<h1 class="block-title mb-0 app-myphone-brand text-white pt-5"><span class="green">Peer</span> <span class="gray">Pals</span> for IOS and Browsers</h1>
-					<p class="lead mt-5 mb-4 skinnyText text-white">Bringing you the simplest way to track progress and send out alerts to all your team members about slaicking! Offering a social media like platform to keep up with your group members</p>
-					<img class="img-fluid" width="800px" src="PortTech2.png" alt="">				
-				</div>
-            </div>
-            
-            <div class="block block-inverse pt-5 pb-5 block-secondary borderbotG bgGray">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-6 col-md-6">
-						
-							<p class="lead text-white">Schedule a group coding session</p>
-							<p class="offWhiteText mnegtop">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus ex ligula, eget finibus risus condimentum eget.</p>
-							<br>
-							<p class="lead text-white">One click to alert and email peers to finish tasks</p>
-							<p class="offWhiteText mnegtop">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus ex ligula, eget finibus risus condimentum eget.</p>
-							<br>
-							<p class="lead text-white">Assign tasks and Track each members progress and total progress in one place</p>
-							<p class="offWhiteText mnegtop">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus ex ligula, eget finibus risus condimentum eget.</p>
-							<br>
-							<p class="lead text-white">Built in Calendar</p>
-							<p class="offWhiteText mnegtop">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus ex ligula, eget finibus risus condimentum eget.</p>
 
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-6 text-center">
-						
-							<img src="progressapp.jpg" alt="" class="img-fluid mt-5">
+				<a id="logoAnimate" class="navbar-brand ml-5" href=""><p style="" class="textRed"><img src="logocircle1.png" width="70px" alt=""></a>
 
-						</div>	
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="nav navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link textRed lead" href="#home">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link textRed lead" href="#menu">Menu</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link textRed lead" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</nav>
+			
+			<div class="">
+				<div class="block bgRed app-block-intro app-translate-5 pb-5" data-transition="entrance">
+					<div class="container text-center">
+						<p data-aos="fade-right" class="h4 center text-white mt-4">- Discover -</p>
+						<div data-aos="fade-zoom-in" data-aos-delay="100" class="display-4 mb-4 textBlue text-center center pulse" style="animation-duration:2s;animation-iteration-count:infinite;">History and Mission</div>
+						<p data-aos="zoom-in-up" data-aos-delay="200" class="lead center text-white">Gyro Guys, the innovative Greek Gyro restaurant located in America, offers fresh and honest cuisine featuring local products and classic greek gyro flavors. A young, passionate and creative team always working with pleasure with fresh food and a multitude of quality meats to concoct simple dishes, showing an aromatic depth and a concern for a job well done. The minimalist and eclectic decor composed of several recycled, raw and reworked elements invites usability and familiarity. A project created from scratch to share a passion for cooking, the pleasure of the table and the importance of taking this time to stop around a meal with loved ones.</p>
 					</div>
 				</div>
 			</div>
+
+			<div class="pl-4 pr-4 mt-5">
+				<div id="jumbotron1" class="jumbotron transparent text-center"></div>
+			</div>
+
+			<div class="container">
+			<div id="hoursBorder" class="block-bordered-lg pb-5 app-translate-5 bgBlack app-block-stats" data-transition="entrance">
+
+				<div class="about textCenter center">
+					<div data-aos="fade-right" class="display-4 mt-5 pb-3 header text-white text-center center">Hours</div>
+				</div>
+				<div class="container text-center mt-5">
+					<div class="row">
+					
+						<div data-aos="flip-left" class="col-sm-4 pt-3 pb-3" style="border-top:1px solid white;border-bottom:1px solid white;">
+						
+							<p class="lead text-light">79 Liston Avenue</p>
+							<p class="lead text-light">Liston Market</p>
+							<p class="lead text-light">Sunday 11AM – 8PM</p>
+							<p class="lead text-light">Monday 11AM – 8PM</p>
+							<p class="lead text-light">Tuesday 11AM – 8PM</p>
+							<p class="lead text-light">Wednesday 11AM – 8PM</p>
+							<p class="lead text-light">Thursday 11AM – 8PM</p>
+							<p class="lead text-light">Friday 11AM – 10PM</p>
+							<p class="lead text-light">Saturday 11AM – 10PM</p>
+						
+						</div>
+
+						<div data-aos="flip-up" data-aos-delay="100" class="col-sm-4 pt-3 pb-3" style="border-top:1px solid white;border-bottom:1px solid white;">
+						
+							<p class="lead text-light">79 Liston Avenue</p>
+							<p class="lead text-light">Liston Market</p>
+							<p class="lead text-light">Sunday 11AM – 8PM</p>
+							<p class="lead text-light">Monday 11AM – 8PM</p>
+							<p class="lead text-light">Tuesday 11AM – 8PM</p>
+							<p class="lead text-light">Wednesday 11AM – 8PM</p>
+							<p class="lead text-light">Thursday 11AM – 8PM</p>
+							<p class="lead text-light">Friday 11AM – 10PM</p>
+							<p class="lead text-light">Saturday 11AM – 10PM</p>
+
+						</div>
+
+						<div data-aos="flip-right" class="col-sm-4 pt-3 pb-3" style="border-top:1px solid white;border-bottom:1px solid white;">
+						
+							<p class="lead text-light">165 Liston Avenue</p>
+							<p class="lead text-light">Liston Market</p>
+							<p class="lead text-light">Sunday 11AM – 8PM</p>
+							<p class="lead text-light">Monday 11AM – 8PM</p>
+							<p class="lead text-light">Tuesday 11AM – 8PM</p>
+							<p class="lead text-light">Wednesday 11AM – 8PM</p>
+							<p class="lead text-light">Thursday 11AM – 8PM</p>
+							<p class="lead text-light">Friday 11AM – 10PM</p>
+							<p class="lead text-light">Saturday 11AM – 10PM</p>
+						
+						</div>
+					
+					</div>
+				</div>
+			</div>
+			</div>
+
+			<div class="pl-4 pr-4 mt-5 mb-3">
+				<div id="menu"></div>
+				<div id="jumbotron2" class="jumbotron transparent text-center"></div>
+			</div>
+
+			<div class="block-bordered-lg pb-5 mt-5 ml-3 mr-3 app-translate-5 app-block-stats" data-transition="entrance">
+				
+				<div class="about textCenter center">
+					<div id="AWOLtext" data-aos="fade-right" class="display-4 header pb-3 text-white text-center center mt-5">Menu</div>
+				</div>
+				<div id="menuSection" data-aos="fade-zoom-in" class="center borderRB text-center mt-5">
+					<div id="accordion">
+						<div class="card bgBlack">
+							<button class="bgRed" style="width:100%;border:none;" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								<div class="card-header bgRed" id="headingOne">
+									<h2 class="text-light">Platters<h2>
+								</div>
+							</button>
+							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+								<div class="card-body">
+									<div class="row">
+										<div class="col text-left text-light">
+											<p class="lead">Chicken Platter</p>
+											<p class="lead">Lamb Platter</p>
+											<p class="lead">Beef Platter</p>
+											<p class="lead">Tilapia Platter</p>
+											<p class="lead">Tikka Platter</p>
+											<p class="lead">Shrimp Platter</p>
+											<p class="lead">Kabob Platter</p>
+										</div>
+										<div class="col text-right text-light">
+											<p class="lead">$4<sup>49</sup></p>
+											<p class="lead">$5<sup>49</sup></p>
+											<p class="lead">$5<sup>49</sup></p>
+											<p class="lead">$5<sup>49</sup></p>
+											<p class="lead">$4<sup>49</sup></p>
+											<p class="lead">$5<sup>49</sup></p>
+											<p class="lead">$5<sup>49</sup></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card bgBlack">
+							<button class="bgBlue" style="width:100%;border:none;" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								<div class="card-header bgBlue" id="headingTwo">
+									<h2 class="text-light">Sides<h2>
+								</div>
+							</button>
+							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+								<div class="card-body">
+									<div class="row">
+										<div class="col text-left text-light">
+											<p class="lead">Gyro Fries</p>
+											<p class="lead">Fries</p>
+											<p class="lead">Falafel</p>
+											<p class="lead">Hummus n' Pita</p>
+											<p class="lead">Grape Leaves</p>
+											<p class="lead">Tiramisu</p>
+											<p class="lead">Greek Salad</p>
+											<p class="lead">Chicken Tenders</p>
+											<p class="lead">Baklawa</p>
+										</div>
+										<div class="col text-right text-light">
+											<p class="lead">$5<sup>49</sup></p>
+											<p class="lead">$5<sup>30</sup></p>
+											<p class="lead">$6<sup>10</sup></p>
+											<p class="lead">$6<sup>10</sup></p>
+											<p class="lead">$6<sup>10</sup></p>
+											<p class="lead">$3<sup>99</sup></p>
+											<p class="lead">$3<sup>99</sup></p>
+											<p class="lead">$7<sup>96</sup></p>
+											<p class="lead">$3<sup>99</sup></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card bgBlack">
+							<button class="bgRed" style="width:100%;border:none;" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								<div class="card-header bgRed" id="headingThree">
+									<h2 class="text-light">Wraps<h2>
+								</div>
+							</button>
+							<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+								<div class="card-body">
+									<div class="row">
+										<div class="col text-left text-light">
+											<p class="lead">Lamb Gyro</p>
+											<p class="lead">Beef Gyro</p>
+											<p class="lead">Chicken Gyro</p>
+											<p class="lead">Combo Gyro</p>
+											<p class="lead">Falafel Gyro</p>
+										</div>
+										<div class="col text-right text-light">
+											<p class="lead">$7<sup>50</sup></p>
+											<p class="lead">$8<sup>99</sup></p>
+											<p class="lead">$7<sup>50</sup></p>
+											<p class="lead">$8<sup>50</sup></p>
+											<p class="lead">$6<sup>50</sup></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card bgBlack">
+							<button class="bgBlue" style="width:100%;border:none;" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+								<div class="card-header bgBlue" id="headingFour">
+									<h2 class="text-light">Shawarma<h2>
+								</div>
+							</button>
+							<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+								<div class="card-body">
+									<div class="row">
+										<div class="col text-left text-light">
+											<p class="lead">Lamb Shawarma</p>
+											<p class="lead">Beef Shawarma</p>
+											<p class="lead">Chicken Shawarma</p>
+										</div>
+										<div class="col text-right text-light">
+											<p class="lead">$7<sup>99</sup></p>
+											<p class="lead">$7<sup>99</sup></p>
+											<p class="lead">$6<sup>99</sup></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card bgBlack">
+							<button class="bgRed" style="width:100%;border:none;" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+								<div class="card-header bgRed" id="headingFive">
+									<h2 class="text-light">Quesadilla<h2>
+								</div>
+							</button>
+							<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+								<div class="card-body">
+									<div class="row">
+										<div class="col text-left text-light">
+											<p class="lead">Lamb Quesadilla</p>
+											<p class="lead">Beef Quesadilla</p>
+											<p class="lead">Chicken Quesadilla</p>
+										</div>
+										<div class="col text-right text-light">
+											<p class="lead">$8<sup>99</sup></p>
+											<p class="lead">$8<sup>99</sup></p>
+											<p class="lead">$8<sup>99</sup></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card bgBlack">
+							<button class="bgBlue" style="width:100%;border:none;" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+								<div class="card-header bgBlue" id="headingSix">
+									<h2 class="text-light">Tacos<h2>
+								</div>
+							</button>
+							<div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+								<div class="card-body">
+									<div class="row">
+										<div class="col text-left text-light">
+											<p class="lead">Lamb Taco</p>
+											<p class="lead">Beef Taco</p>
+											<p class="lead">Chicken Taco</p>
+										</div>
+										<div class="col text-right text-light">
+											<p class="lead">$6<sup>99</sup></p>
+											<p class="lead">$6<sup>99</sup></p>
+											<p class="lead">$6<sup>99</sup></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card bgBlack">
+							<button class="bgRed" style="width:100%;border:none;" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+								<div class="card-header bgRed" id="headingSeven">
+									<h2 class="text-light">Drinks<h2>
+								</div>
+							</button>
+							<div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+								<div class="card-body">
+									<div class="row">
+										<div class="col text-left text-light">
+											<p class="lead">Mint Lemonade</p>
+											<p class="lead">Mango Juice</p>
+											<p class="lead">Soda Can</p>
+											<p class="lead">Soda Bottle</p>
+											<p class="lead">Fountain Drink</p>
+											<p class="lead">Peach Juice</p>
+										</div>
+										<div class="col text-right text-light">
+											<p class="lead">$2<sup>99</sup></p>
+											<p class="lead">$2<sup>99</sup></p>
+											<p class="lead">$1<sup>49</sup></p>
+											<p class="lead">$2<sup>49</sup></p>
+											<p class="lead">$1<sup>50</sup></p>
+											<p class="lead">$2<sup>99</sup></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
+
+			<div class="pl-4 pr-4 mt-3 mb-3">
+				<div id="jumbotron3" class="jumbotron transparent text-center"></div>
+			</div>
+
+			<div id="customer" class="block-bordered-lg pt-3 pb-3 ml-3 mr-3 bgBlack mt-5 app-translate-5 app-block-stats" data-transition="entrance">
+				
+				<div class="pl-5 pr-5 text-center">
+
+					<div class="row">
+						<div data-aos="fade-right" class="col">
+							<h1 class="textBlue"><i class="fas fa-concierge-bell"></i> Amazing Customer Service</h1>
+							<p class="text-light">We understand that customer service sets great businesses apart from the rest. Customers are the reason that businesses exist. Keeping those customers happy means being responsive to their needs and wants. A good customer service experience can turn a one-time customer into a lifelong repeat customer.</p>
+							<h1 class="textRed mt-3"><i class="fas fa-shipping-fast"></i> Fast Delivery</h1>
+							<p class="text-light">We currently offer one of the fastest methods to get your food to you. Partnered with Skip-the-Dishes and UberEats we guarantee your food will get to you in time.</p>
+							<h1 class="textBlue mt-3"><i class="fas fa-laugh-beam"></i> Guaranteed Customer Satisfaction</h1>
+							<p class="text-light">In the 21st century, companies are facing their toughest competition yet but what most of them fail to understand is that the customer always comes first. Therefore at TGG we believe in catering to each of our customers needs and we guarantee that you will be satisfied.</p>
+						</div>
+
+						<div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-offset="0" id="images" class="shortDesc col">
+							
+						</div>
+					</div>
+					
+				</div>
+
+			</div>	
+			
+			<div data-aos="fade-up" data-aos-duration="800" class="block-bordered-lg bgBlue pt-5 pb-5 mb-5 ml-4 mr-4 mt-5 app-block-stats">
+				
+				<div class="container">
+				
+					<div class="row mb-5"><div id="AWOLtext" class="display-4 pl-3 text-white">Contact Us</div></div>
+
+					<div class="row">
+						<div class="col-md-6 mb-5">
+							<div class="row">
+								<div class="col">
+									<h2 class="text-light mb-3">Address<h2>
+									<h3 class="text-light"><i class="fas fa-map-marker-alt mr-2"></i>The Gyro Guys</h3>
+									<p class="text-light">790 Liston Avenue, QC, G8Z 3W2</p>
+									<h3 class="text-light"><i class="fas fa-phone mr-2 mb-3"></i>810-560-8954</h3>
+									<h3 class="text-light"><i class="fas fa-envelope mr-2 mb-3"></i>xxx@xxx.com</h3>
+									<h3 class="text-light"><i class="fab fa-facebook-f mr-2"></i>/ The Gyro Guys</h3>
+								</div>
+								<div class="col">
+									<h2 class="text-light mb-3">Business Hours<h2>
+									<h3 class="text-light"><i class="far fa-clock mr-2"></i>Morning</h3>
+									<p class="text-light">Monday to Friday<br>from 08:00 to 11:30</p>
+									<h3 class="text-light"><i class="fas fa-clock mr-2"></i>Evening</h3>
+									<p class="text-light">Monday to Saturday<br>from 12:00 to 08:00</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<img src="map.png" class="" alt="">
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<div id="contact"></div>
+
 		</div>
 
-        <div class="block block-inverse pt-5 pb-5 block-secondary bgBlack">
-			
-			<div class="block block-inverse pt-5 pb-5 block-secondary bgBlack">
-			
-                <div class="about textCenter center">
-                    <div data-aos="fade-right" id="AWOLtext" class="h1 text-white text-center center"><span class="green">Exec</span><span class="gray">ution</span></div>
-                </div>
-                <div class="text-center center">
-                    <p class="lead text-white mt-4">Using a hashtag enables you to interact with the main interface and execute commands provided by the application</p>
-                    <p class="offWhiteText mnegtop mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                    <button id="reqbtn" name="reqbtn" type="submit" class="btn mt-3 btn-outline-success btn-circle btn-lg" style="width:130px;"><p style="font-size:20px">Visit App</p></button>
-                </div>
-    
-            </div>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/tether.min.js"></script>
+		<script src="assets/js/toolkit.js"></script>
+		<script src="assets/js/application.js"></script>	
+		<script src="dist/aos.js"></script>
+		<script>
 
-		</div>
+			setTimeout(function(){
+				$("#loadingBody").css("display", "none")
+				$("#mainBody").css("display", "inherit")
+				AOS.init({
+					duration: 800,
+					once: true
+				});
+			},8000);
 
-    </body>
+		</script>
+
+	</body>
 </html>
+
